@@ -46,7 +46,7 @@ $border-color-b: #666;
 
 
 body { background:$color-gray-light; color:$color-tan; line-height:$font-paragraph-line-height; font-family:$font-paragraph; height:100%; }
-#page { font-size:$font-paragraph-size; height:100%; }
+#page { position:relative; font-size:$font-paragraph-size; height:100%; }
 .outer-wrap { position:relative; height:100%; }
 .inner-wrap { max-width:$max-width-a; position:relative; margin:0 auto; text-align:left; height:100%; }
 
@@ -56,7 +56,7 @@ a:hover { text-decoration:underline; }
 .h1, h1, .h2, h2, .h3, h3, .h4, h4, .h5, h5, .h6, h6 { 
 	font-family:$font-title; font-weight:$font-title-weight; display:block; line-height:$font-title-line-height; 
 	color:$color-purple-dark; padding-bottom:$standard-pad; padding-top:($standard-pad/2);
-	a { color:$color-purple-dark; }
+	a:visited, a { color:$color-purple-dark; }
 }
 .h1, h1 { font-size:60px; }
 .h2, h2 { font-size:50px; }
@@ -97,11 +97,15 @@ input[type="email"]:hover,input[type="email"]:focus {
 
 /* Buttons
 #################################################################################################### */
-input[type="submit"],input[type="button"],
-.btn { 
+.btn,
+input[type="submit"],input[type="button"] { 
 	cursor:pointer; display:inline-block; padding:($standard-pad/2) ($standard-pad); background:$color-purple-dark;
 	color:#fff; font-size:$font-paragraph-size; font-family:$font-paragraph; 
 	@include transition(all 0.1s ease-in); border:none; @include border-radius(3px);
+}
+.btn:hover,
+input[type="submit"]:hover,input[type="button"]:hover {
+	opacity:0.8;
 }
 
 
@@ -112,14 +116,14 @@ input[type="submit"],input[type="button"],
 /* Blocks
 #################################################################################################### */
 
-#page { padding-top:($standard-pad*5); }
+#page { padding-top:($standard-pad*6); }
 
 #header { 
 	position:fixed; z-index:10; top:0; left:0; width:100%; height:($standard-pad*4); background:#fff; 
 	.inner-wrap { text-align:center; }
 	#primary-navigation {
 		li { display:inline-block; }
-		a { display:inline-block; padding:0 ($standard-pad); line-height:($standard-pad*4); }
+		a { display:inline-block; padding:0 ($standard-pad); line-height:($standard-pad*4); @include transition(all 0.1s ease-in) }
 		a:hover { background:$color-gray-light; }
 	}
 }
@@ -175,8 +179,13 @@ input[type="submit"],input[type="button"],
 
 .hentry { position:relative; }
 #loop-default {
+	padding-bottom:($standard-pad*4);
 	.hentry { padding:($standard-pad*4) 0 ($standard-pad*2) 0; }
 	.hentry:first-child { padding:0 0 ($standard-pad*2) 0; }
+}
+
+.blog, .archive {
+	h3 { border-bottom:solid 1px #fff; padding-bottom:$standard-pad; margin-bottom:$standard-pad; }
 }
 
 
