@@ -701,185 +701,216 @@ ul.sf-menu li li li:hover ul, ul.sf-menu li li li.sfHover ul { left: 10em; top: 
   .navbar-static .navbar-inner { padding-right: 10px; padding-left: 10px; } }
 @media (min-width: 980px) { /* line 1105, ../sass/bootstrap-responsive.scss */
   .nav-collapse.collapse { height: auto !important; overflow: visible !important; } }
+/* Padding */
 /* Paragraph */
 /* Title */
 /* Block */
 /*Colors*/
 /*mixin*/
-/* line 39, ../sass/default.scss */
-body { line-height: 18px; font-family: "Muli", sans-serif; height: 100%; }
-
-/* line 40, ../sass/default.scss */
-#page { font-size: 12px; height: 100%; }
-
-/* line 41, ../sass/default.scss */
-.outer-wrap { position: relative; height: 100%; }
-
-/* line 42, ../sass/default.scss */
-.inner-wrap { max-width: 940px; position: relative; margin: 0 auto; text-align: left; height: 100%; }
-
-/* line 44, ../sass/default.scss */
-a, a:visited { text-decoration: none; }
-
-/* line 46, ../sass/default.scss */
-.h1, h1, .h2, h2, .h3, h3, .h4, h4, .h5, h5, .h6, h6 { font-family: "Quattrocento", serif; font-weight: 400; display: block; line-height: 1.1em; }
-
-/* line 47, ../sass/default.scss */
-.h1, h1 { font-size: 26px; }
-
 /* line 48, ../sass/default.scss */
-.h2, h2 { font-size: 23px; }
+body { background: #f3f2f3; color: #919182; line-height: 28px; font-family: "Muli", sans-serif; height: 100%; }
 
 /* line 49, ../sass/default.scss */
-.h3, h3 { font-size: 20px; }
+#page { font-size: 18px; height: 100%; }
 
 /* line 50, ../sass/default.scss */
-.h4, h4 { font-size: 17px; }
+.outer-wrap { position: relative; height: 100%; }
 
 /* line 51, ../sass/default.scss */
-.h5, h5 { font-size: 14px; }
+.inner-wrap { max-width: 800px; position: relative; margin: 0 auto; text-align: left; height: 100%; }
 
-/* line 52, ../sass/default.scss */
-.h6, h6 { font-size: 12px; }
+/* line 53, ../sass/default.scss */
+a, a:visited { color: #013482; text-decoration: none; }
+
+/* line 54, ../sass/default.scss */
+a:hover { text-decoration: underline; }
+
+/* line 56, ../sass/default.scss */
+.h1, h1, .h2, h2, .h3, h3, .h4, h4, .h5, h5, .h6, h6 { font-family: "Quattrocento", serif; font-weight: 400; display: block; line-height: 1.1em; color: #595968; padding-bottom: 15px; padding-top: 7.5px; }
+/* line 59, ../sass/default.scss */
+.h1 a, h1 a, .h2 a, h2 a, .h3 a, h3 a, .h4 a, h4 a, .h5 a, h5 a, .h6 a, h6 a { color: #595968; }
+
+/* line 61, ../sass/default.scss */
+.h1, h1 { font-size: 60px; }
+
+/* line 62, ../sass/default.scss */
+.h2, h2 { font-size: 50px; }
+
+/* line 63, ../sass/default.scss */
+.h3, h3 { font-size: 40px; }
+
+/* line 64, ../sass/default.scss */
+.h4, h4 { font-size: 34px; }
+
+/* line 65, ../sass/default.scss */
+.h5, h5 { font-size: 30px; }
+
+/* line 66, ../sass/default.scss */
+.h6, h6 { font-size: 25px; }
 
 /* Forms
 #################################################################################################### */
-/* line 61, ../sass/default.scss */
-textarea, input[type="text"], input[type="password"], input[type="email"] { font-size: 12px; font-family: "Muli", sans-serif; width: 97%; border: solid 1px #aaaaaa; border-top-color: #666666; padding: 3px 1%; }
+/* line 75, ../sass/default.scss */
+textarea, input[type="text"], input[type="password"], input[type="email"] { font-size: 18px; font-family: "Muli", sans-serif; width: 97%; line-height: 30px; padding: 7.5px 1%; background: #e8e8e4; border: none; -webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; border-radius: 3px; color: #595968; -webkit-transition: all 0.1s ease-in; -moz-transition: all 0.1s ease-in; -o-transition: all 0.1s ease-in; transition: all 0.1s ease-in; }
 
-/* line 68, ../sass/default.scss */
+/* line 83, ../sass/default.scss */
 textarea { height: 100px; }
 
-/* line 69, ../sass/default.scss */
+/* line 84, ../sass/default.scss */
 label.error { color: red; }
+
+/* line 86, ../sass/default.scss */
+textarea:hover, textarea:focus, input[type="text"]:hover, input[type="text"]:focus, input[type="password"]:hover, input[type="password"]:focus, input[type="email"]:hover, input[type="email"]:focus { background: #fff; }
 
 /* Buttons
 #################################################################################################### */
-/* line 78, ../sass/default.scss */
-.btn { cursor: pointer; display: inline-block; padding: 2px 6px; }
+/* line 100, ../sass/default.scss */
+input[type="submit"], input[type="button"], .btn { cursor: pointer; display: inline-block; padding: 7.5px 15px; background: #595968; color: #fff; font-size: 18px; font-family: "Muli", sans-serif; -webkit-transition: all 0.1s ease-in; -moz-transition: all 0.1s ease-in; -o-transition: all 0.1s ease-in; transition: all 0.1s ease-in; border: none; -webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; border-radius: 3px; }
 
 /* Blocks
 #################################################################################################### */
+/* line 115, ../sass/default.scss */
+#page { padding-top: 75px; }
+
+/* line 117, ../sass/default.scss */
+#header { position: fixed; z-index: 10; top: 0; left: 0; width: 100%; height: 60px; background: #fff; }
+/* line 119, ../sass/default.scss */
+#header .inner-wrap { text-align: center; }
+/* line 121, ../sass/default.scss */
+#header #primary-navigation li { display: inline-block; }
+/* line 122, ../sass/default.scss */
+#header #primary-navigation a { display: inline-block; padding: 0 15px; line-height: 60px; }
+/* line 123, ../sass/default.scss */
+#header #primary-navigation a:hover { background: #f3f2f3; }
+
+/* line 126, ../sass/default.scss */
+#footer { padding: 30px 0; }
+/* line 128, ../sass/default.scss */
+#footer .inner-wrap { text-align: center; }
+
 /* General Links
 #################################################################################################### */
 /* Main Navigation Links */
-/* line 99, ../sass/default.scss */
+/* line 142, ../sass/default.scss */
 #primary-navigation a { text-decoration: none; }
 
 /* footer-navigation */
-/* line 107, ../sass/default.scss */
+/* line 150, ../sass/default.scss */
 #footer-navigation li { display: inline; padding: 0 6px 0 0; margin: 0 4px 0 0; }
 
 /* Navigation */
-/* line 112, ../sass/default.scss */
+/* line 155, ../sass/default.scss */
 .navigation-post { display: block; clear: both; text-align: left; padding: 3px 7px; }
-/* line 114, ../sass/default.scss */
+/* line 157, ../sass/default.scss */
 .navigation-post .prev-post { padding-left: 7px; }
-/* line 115, ../sass/default.scss */
+/* line 158, ../sass/default.scss */
 .navigation-post .next-post { padding-right: 7px; }
 
-/* line 119, ../sass/default.scss */
+/* line 162, ../sass/default.scss */
 .wp-pagenavi a, .wp-pagenavi span { padding: 3px 4px; margin: 3px; }
 
-/* line 122, ../sass/default.scss */
+/* line 165, ../sass/default.scss */
 #navigation-breadcrumb { font-weight: bold; padding-bottom: 3px; display: block; clear: both; }
 
-/* line 123, ../sass/default.scss */
+/* line 166, ../sass/default.scss */
 .navigation-posts { font-weight: bold; padding-bottom: 3px; display: block; clear: both; text-align: center; }
 
 /* Post, Page & General Loops
 #################################################################################################### */
-/* line 133, ../sass/default.scss */
+/* line 176, ../sass/default.scss */
 .hentry { position: relative; }
 
-/* line 135, ../sass/default.scss */
-#loop-default .hentry { padding: 45px 0 15px 0; }
-/* line 136, ../sass/default.scss */
-#loop-default .hentry:first-child { padding: 0 0 15px 0; }
+/* line 178, ../sass/default.scss */
+#loop-default .hentry { padding: 60px 0 30px 0; }
+/* line 179, ../sass/default.scss */
+#loop-default .hentry:first-child { padding: 0 0 30px 0; }
 
 /* Meta Data */
-/* line 144, ../sass/default.scss */
-.post-comments { padding: 0 7px 0 0; }
+/* line 185, ../sass/default.scss */
+.meta-data { font-style: italic; padding-bottom: 15px; }
 
-/* line 145, ../sass/default.scss */
-.post-date { padding: 0 7px 0 0; }
+/* line 187, ../sass/default.scss */
+.post-comments { padding: 0 15px 0 0; }
 
-/* line 146, ../sass/default.scss */
+/* line 188, ../sass/default.scss */
+.post-date { padding: 0 15px 0 0; }
+
+/* line 189, ../sass/default.scss */
 .read-more-dots { display: none; }
 
 /* Entry - Excerpt */
-/* line 152, ../sass/default.scss */
+/* line 195, ../sass/default.scss */
 #loop-default .entry { clear: both; }
-/* line 153, ../sass/default.scss */
+/* line 196, ../sass/default.scss */
 #loop-default .excerpt { clear: none; padding: 0; }
 
-/* line 156, ../sass/default.scss */
+/* line 199, ../sass/default.scss */
 a.read_more { text-decoration: underline; font-style: italic; display: block; }
 
-/* line 159, ../sass/default.scss */
+/* line 202, ../sass/default.scss */
 .entry .aligncenter { display: block; margin: 0 auto 15px; }
-/* line 160, ../sass/default.scss */
+/* line 203, ../sass/default.scss */
 .entry .alignnone { clear: both; float: none; }
-/* line 161, ../sass/default.scss */
-.entry .alignleft { margin-right: 3px; margin-bottom: 3px; }
-/* line 162, ../sass/default.scss */
-.entry .alignright { margin-left: 3px; margin-bottom: 3px; }
-/* line 163, ../sass/default.scss */
-.entry img { max-width: 100% !important; height: auto !important; }
-/* line 164, ../sass/default.scss */
+/* line 204, ../sass/default.scss */
+.entry .alignleft { margin-right: 15px; margin-bottom: 3px; }
+/* line 205, ../sass/default.scss */
+.entry .alignright { margin-left: 15px; margin-bottom: 3px; }
+/* line 206, ../sass/default.scss */
+.entry img { border: solid 4px #fff; max-width: 100% !important; height: auto !important; }
+/* line 207, ../sass/default.scss */
 .entry img.wp-smiley { border: none; margin: 0; padding: 0; box-shadow: none; -moz-box-shadow: none; -webkit-box-shadow: none; }
-/* line 165, ../sass/default.scss */
-.entry p { padding-bottom: 20px; }
-/* line 167, ../sass/default.scss */
+/* line 208, ../sass/default.scss */
+.entry p { padding-bottom: 30px; }
+/* line 210, ../sass/default.scss */
 .entry blockquote p { padding: 0; margin: 10px 45px 20px 20px; }
-/* line 169, ../sass/default.scss */
-.entry ol, .entry ul { margin: 5px 0 15px 20px; }
-/* line 170, ../sass/default.scss */
+/* line 212, ../sass/default.scss */
+.entry ol, .entry ul { margin: 15px 0 30px 20px; }
+/* line 213, ../sass/default.scss */
 .entry ul { list-style: disc; }
-/* line 171, ../sass/default.scss */
+/* line 214, ../sass/default.scss */
 .entry ol { list-style: decimal; }
-/* line 172, ../sass/default.scss */
+/* line 215, ../sass/default.scss */
 .entry li { padding-bottom: 7px; }
-/* line 174, ../sass/default.scss */
+/* line 217, ../sass/default.scss */
 .entry small { font-size: 11px; }
-/* line 175, ../sass/default.scss */
+/* line 218, ../sass/default.scss */
 .entry table { line-height: 18px; }
-/* line 177, ../sass/default.scss */
+/* line 220, ../sass/default.scss */
 .entry table table td { padding-right: 7px; vertical-align: top; }
 
 /*end .entry */
-/* line 181, ../sass/default.scss */
-.excerpt p { padding-bottom: 10px; }
+/* line 224, ../sass/default.scss */
+.excerpt p { padding-bottom: 30px; }
 
 /* Gallery Shortcode */
-/* line 187, ../sass/default.scss */
+/* line 230, ../sass/default.scss */
 .gallery dl.gallery-item { display: block; float: left; }
 
-/* line 194, ../sass/default.scss */
+/* line 237, ../sass/default.scss */
 .wp-caption { max-width: 96%; display: block; text-align: center !important; padding: 5px; background: #eee; }
-/* line 196, ../sass/default.scss */
+/* line 239, ../sass/default.scss */
 .wp-caption p { font-size: 11px; line-height: 14px; padding: 5px 0 7px; }
-/* line 197, ../sass/default.scss */
+/* line 240, ../sass/default.scss */
 .wp-caption img { display: inline; }
 
 /* All sitemap style layouts - search, 404, sitemap */
-/* line 204, ../sass/default.scss */
+/* line 247, ../sass/default.scss */
 .layout-sitemap .display-list { margin: 0 2% 20px 0; width: 48%; float: left; }
-/* line 207, ../sass/default.scss */
+/* line 250, ../sass/default.scss */
 .layout-sitemap .display-list ul { margin: 10px 0 0 0; }
-/* line 208, ../sass/default.scss */
+/* line 251, ../sass/default.scss */
 .layout-sitemap .display-list ul ul { margin: 0 0 7px 15px; list-style: disc; }
-/* line 209, ../sass/default.scss */
+/* line 252, ../sass/default.scss */
 .layout-sitemap .display-list ul ul.children { padding: 0; margin-left: 15px; list-style: disc; }
-/* line 211, ../sass/default.scss */
+/* line 254, ../sass/default.scss */
 .layout-sitemap .display-list .site-search { display: block; padding-bottom: 10px; }
 
 /* Widget Areas
 #################################################################################################### */
 /* Menu indiv */
-/* line 226, ../sass/default.scss */
+/* line 269, ../sass/default.scss */
 .sidebar ul li { margin-bottom: 10px; }
-/* line 227, ../sass/default.scss */
+/* line 270, ../sass/default.scss */
 .sidebar ul li li { margin: 0; }
 
 /* Comments */
@@ -922,25 +953,27 @@ License GPL v2 - http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 #comments .commentlist li ul.children { list-style: none; margin: 10px 0 0 0; text-indent: 0; }
 /* line 30, ../sass/comments.scss */
 #comments .commentlist li ul.children li { padding-bottom: 0; }
+/* line 32, ../sass/comments.scss */
+#comments .commentlist li .comment-text-block { padding: 15px 0 30px; }
 
 /*end #comments*/
-/* line 38, ../sass/comments.scss */
-#respond { /*end form*/ }
 /* line 39, ../sass/comments.scss */
+#respond { /*end form*/ }
+/* line 40, ../sass/comments.scss */
 #respond #reply-title { margin: 0 0 7px; }
-/* line 46, ../sass/comments.scss */
-#respond form .form-block { padding-bottom: 7px; }
 /* line 47, ../sass/comments.scss */
-#respond form label { display: inline-block; width: 20%; }
+#respond form .form-block { padding-bottom: 7px; }
 /* line 48, ../sass/comments.scss */
-#respond form .required { width: 0%; display: none; }
+#respond form label { display: inline-block; width: 20%; }
 /* line 49, ../sass/comments.scss */
+#respond form .required { width: 0%; display: none; }
+/* line 50, ../sass/comments.scss */
 #respond form intput[type="text"] { display: inline-block; margin: 7px 0; width: 40% !important; }
-/* line 52, ../sass/comments.scss */
+/* line 53, ../sass/comments.scss */
 #respond form .comment-notes, #respond form .comment-form-author, #respond form .comment-form-email, #respond form .comment-form-url, #respond form .comment-form-comment { padding-bottom: 7px; }
-/* line 58, ../sass/comments.scss */
+/* line 59, ../sass/comments.scss */
 #respond form .comment-form-url label { display: inline-block; width: 21%; }
-/* line 60, ../sass/comments.scss */
+/* line 61, ../sass/comments.scss */
 #respond form .button-submit { margin-top: 7px; }
 
 /*end #respond*/

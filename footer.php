@@ -17,17 +17,7 @@
 	<!-- Start Footer -->
 	<div id="footer" class="outer-wrap">
 		<footer class="inner-wrap">
-			<?php 
-			
-			wp_nav_menu( array( 
-				'depth' => 1, 
-				'fallback_cb' => '', 
-				'theme_location' => 'footer-navigation', 
-				'container' => 'div', 
-				'container_id' => 'footer-navigation' 
-			) );
-			
-			?>
+			<p>&copy;<?php echo date('Y'); ?> <?php bloginfo('name'); ?></p>
 			<div class="clear"></div>
 		</footer>
 	</div><!-- End Footer -->

@@ -235,7 +235,8 @@ class ChildTheme_VC {
 		// global $is_IE;
 		
 		wp_register_style( 'google-fonts', "http://fonts.googleapis.com/css?family=Muli:400,400italic|Quattrocento:400,700", array(), null );
-		wp_register_style( 'childtheme-default', "$this->stylesheet_directory_uri/css/default.css", array(), null );
+		wp_register_style( 'icomoon', "$this->stylesheet_directory_uri/css/icomoon/style.css", array(), null );
+		wp_register_style( 'childtheme-default', "$this->stylesheet_directory_uri/css/default.css", array('icomoon'), null );
 		wp_register_script( 'childTheme', "$this->stylesheet_directory_uri/js/min/childTheme-min.js", array('jquery'), null );
 		
 		/*if ( $is_IE ) {
