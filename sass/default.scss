@@ -25,6 +25,7 @@ $font-title-line-height: 1.1em;
 
 /* Block */
 $max-width-a: 800px;
+$max-width-b: 700px;
 
 /*Colors*/
 $color-error: red;
@@ -45,10 +46,10 @@ $border-color-b: #666;
 @mixin transition($transition) { -webkit-transition:$transition; -moz-transition:$transition; -o-transition:$transition; transition:$transition; }
 
 
-body { background:$color-gray-light; color:$color-tan; line-height:$font-paragraph-line-height; font-family:$font-paragraph; height:100%; }
-#page { position:relative; font-size:$font-paragraph-size; height:100%; }
+body { position:relative; background:$color-gray-light; color:$color-tan; line-height:$font-paragraph-line-height; font-family:$font-paragraph; height:100%; }
+#page { padding-top:($standard-pad*6); position:relative; font-size:$font-paragraph-size; height:100%; }
 .outer-wrap { position:relative; height:100%; }
-.inner-wrap { max-width:$max-width-a; position:relative; margin:0 auto; text-align:left; height:100%; }
+.inner-wrap { max-width:$max-width-a; position:relative; margin:0 auto; padding:0 $standard-pad; text-align:left; height:100%; }
 
 a, a:visited { color:$color-blue-dark; text-decoration:none; }
 a:hover { text-decoration:underline; }
@@ -64,6 +65,15 @@ a:hover { text-decoration:underline; }
 .h4, h4 { font-size:34px; }
 .h5, h5 { font-size:30px; }
 .h6, h6 { font-size:25px; }
+
+
+
+.spacer {
+	line-height:0; text-align:center; height:$standard-pad; padding:($standard-pad/2) 0 ($standard-pad*2);
+	position:relative; color:#fff; width:80%; margin:0 auto;
+	.line { display:inline-block; height:2px; background:#fff; position:absolute; top:$standard-pad; left:0; width:100%; }
+	.icon-support { position:relative; top:-5px; z-index:2; display:inline-block; font-size:30px; padding:0 $standard-pad; background:$color-gray-light; }
+}
 
 
 
@@ -115,8 +125,6 @@ input[type="submit"]:hover,input[type="button"]:hover {
 
 /* Blocks
 #################################################################################################### */
-
-#page { padding-top:($standard-pad*6); }
 
 #header { 
 	position:fixed; z-index:10; top:0; left:0; width:100%; height:($standard-pad*4); background:#fff; 
@@ -268,17 +276,33 @@ a.read_more { text-decoration:underline; font-style:italic; display:block; }
 
 
 
-/* Widget Areas
+/* Home
 #################################################################################################### */
 
-
-/* Menu indiv */
-.sidebar ul {
-	ul {}
-	li { margin-bottom:10px; }
-	li li { margin:0; }
-
-	.widget-box {}
+body.home-page {
+	#page { padding-top:($standard-pad*4); }
+	#home-header {
+		color:#fff; padding:($standard-pad*8) 0; text-shadow:0 1px 2px rgba( 0,0,0,0.4 );
+		background:no-repeat center center;
+		-webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;
+		.inner-wrap { text-align:center; }
+		h1, .h5 { color:#fff; }
+		.icon-support { display:inline-block; font-size:60px; padding-bottom:$standard-pad; }
+		.cover { width:100%; height:100%; position:absolute; top:0; left:0; background:rgba( 0,0,0,0.2 ); }
+	}
+	.section { 
+		padding:($standard-pad*4) 0; 
+		h2 { text-align:center; }
+		.inner-wrap { max-width:$max-width-b; }
+	}
+	.section:nth-child(2n+2) { 
+		background:#fff; 
+		.spacer {
+			color:$color-gray-light;
+			.line { background:$color-gray-light; }
+			.icon-support { background:#fff; }
+		}
+	}
 }
 
 

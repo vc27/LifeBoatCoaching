@@ -11,17 +11,82 @@
  **/
 #################################################################################################### */
 
-get_template_part( 'header' );
+$_home__header_image = get_field('_home__header_image');
+
+get_template_part( 'header-head' );
 
 ?>
-<div class="row-fluid">
-	<div class="span8">
-		<?php get_template_part( 'loop-default' ); ?>
-	</div>
-	<div class="span4">
-		<?php vc_sidebars( 'Primary Sidebar' ); ?>
-	</div>
-</div>
-<?php
+<!-- Start Body -->
+<body <?php body_class('home-page'); ?>>
+	<?php do_action('after_body_tag'); ?>
+	<div id="page">
+			
+		<!-- Start Header -->
+		<div id="header" class="outer-wrap">
+			<header class="inner-wrap">
+				<?php 
+				
+				wp_nav_menu( array( 
+					'fallback_cb' => '', 
+					'theme_location' => 'primary-navigation', 
+					'container' => 'div', 
+					'container_id' => 'primary-navigation', 
+					// 'menu_class' => 'sf-menu' 
+				) );
+				
+				?>
+				<div class="clear"></div>
+			</header>
+		</div>
+		
+		
+		
+		<div id="home-header" class="outer-wrap" style="background-image:url('<?php echo $_home__header_image['url']; ?>');">
+			<div class="cover"></div>
+			<div class="inner-wrap">
+				<span class="icon-support"></span>
+				<h1>Lifeboat Coaching</h1>
+				<div class="h5"><?php the_field('_home__header_description'); ?></div>
+			</div>
+		</div>
+		
+		
+		<?php
+		
+		if ( have_rows('_home__sections') ) {
+			while ( have_rows('_home__sections') ) {
+				the_row();
+				
+				echo "<div class=\"outer-wrap section\">";
+					echo "<div class=\"inner-wrap\">";
+						echo "<h2>" . get_sub_field('_home__section_title') . "</h2>";
+						echo "<div class=\"spacer\"><span class=\"line\"></span><span class=\"icon-support\"></span></div>";
+						echo "<div class=\"entry\">" . get_sub_field('_home__section_text') . "</div>";
+						if ( 'yes' == get_sub_field('_home__section_include_a_form') ) {
+							$form = get_sub_field('_home__section_form');
+							gravity_form_enqueue_scripts( $form->id, true );
+							gravity_form( $form->id, false, false, false, '', true, 1 );
+						}
+					echo "</div>";
+				echo "</div>";
+				
+			}
+		}
+		
+		?>
+		
+		
+		
+		<div id="footer" class="outer-wrap">
+			<footer class="inner-wrap">
+				<p>&copy;<?php echo date('Y'); ?> <?php bloginfo('name'); ?></p>
+				<div class="clear"></div>
+			</footer>
+		</div><!-- End Footer -->
 
-get_template_part( 'footer' );
+	</div><!-- End Page -->
+
+<!-- Start wp_footer -->
+<?php wp_footer(); ?>
+</body>
+</html>

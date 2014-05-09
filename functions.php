@@ -165,7 +165,7 @@ class ChildTheme_VC {
 		add_action( 'wp_enqueue_scripts', array( &$this, 'wp_enqueue_scripts' ) );
 		add_filter( 'parenttheme-localize_script', array( &$this, 'localize_script' ) );
 		
-		add_action( 'wp_enqueue_scripts', array( &$this, 'deregister' ), 11 );
+		add_action( 'wp_enqueue_scripts', array( &$this, 'deregister' ), 10 );
 		
 		// Breadcrumb Navigation
 		add_action( 'inner_wrap_top', array( &$this, 'breadcrumb_navigation' ) );
@@ -232,17 +232,16 @@ class ChildTheme_VC {
 	 * @updated 04.15.14
 	 **/
 	function register_style_and_scripts() {
-		// global $is_IE;
+		global $is_IE;
 		
-		wp_register_style( 'google-fonts', "http://fonts.googleapis.com/css?family=Muli:400,400italic|Quattrocento:400,700", array(), null );
 		wp_register_style( 'icomoon', "$this->stylesheet_directory_uri/css/icomoon/style.css", array(), null );
 		wp_register_style( 'childtheme-default', "$this->stylesheet_directory_uri/css/default.css", array('icomoon'), null );
 		wp_register_script( 'childTheme', "$this->stylesheet_directory_uri/js/min/childTheme-min.js", array('jquery'), null );
 		
-		/*if ( $is_IE ) {
+		if ( $is_IE ) {
 			wp_register_style( 'IE8', "$this->stylesheet_directory_uri/css/IE8.css", array(), null );
 			wp_register_style( 'IE9', "$this->stylesheet_directory_uri/css/IE9.css", array(), null );
-		}*/
+		}
 		
 	} // end function register_style_and_scripts 
 	
@@ -318,9 +317,7 @@ class ChildTheme_VC {
 	 **/
 	function wp_print_styles() {
 		
-		wp_enqueue_style( 'google-fonts' );
 		wp_enqueue_style( 'childtheme-default' );
-		/*
 		global $is_IE, $wp_styles;
 		if ( $is_IE ) {
 			wp_enqueue_style( 'IE8' );
@@ -328,7 +325,7 @@ class ChildTheme_VC {
 
 			wp_enqueue_style( 'IE9' );
 			$wp_styles->add_data( 'IE9', 'conditional', 'lt IE 10' );
-		}*/
+		}
 
 	} // end function wp_print_styles
 	
