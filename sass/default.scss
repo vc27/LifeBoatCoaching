@@ -74,6 +74,13 @@ a:hover { text-decoration:underline; }
 	.line { display:inline-block; height:2px; background:#fff; position:absolute; top:$standard-pad; left:0; width:100%; }
 	.icon-support { position:relative; top:-5px; z-index:2; display:inline-block; font-size:30px; padding:0 $standard-pad; background:$color-gray-light; }
 }
+.home-section-image {
+	background:no-repeat center center; border:solid 4px #fff; 
+	-webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;
+}
+.img-circle-left { @include border-radius(1000px); width:150px; height:150px; }
+.img-rectangle-bottom { width:100%; height:260px; }
+.img-circle-bottom { @include border-radius(1000px); width:200px; height:200px; margin:0 auto; }
 
 
 
@@ -86,7 +93,7 @@ textarea,
 input[type="text"],
 input[type="password"],
 input[type="email"] { 
-	font-size:$font-paragraph-size; font-family:$font-paragraph; 
+	font-size:$font-paragraph-size !important; font-family:$font-paragraph !important; opacity:1;
 	width:97%; line-height:($standard-pad*2); padding:($standard-pad/2) 1%; background:$color-tan-light; border:none;
 	@include border-radius(3px); color:$color-purple-dark; @include transition(all 0.1s ease-in);
 }
@@ -97,7 +104,7 @@ textarea:hover, textarea:focus,
 input[type="text"]:hover,input[type="text"]:focus,
 input[type="password"]:hover,input[type="password"]:focus,
 input[type="email"]:hover,input[type="email"]:focus {
-	background:#fff;
+	opacity:0.6;
 }
 
 
@@ -107,7 +114,7 @@ input[type="email"]:hover,input[type="email"]:focus {
 
 /* Buttons
 #################################################################################################### */
-.btn,
+.btn, a.btn,
 input[type="submit"],input[type="button"] { 
 	cursor:pointer; display:inline-block; padding:($standard-pad/2) ($standard-pad); background:$color-purple-dark;
 	color:#fff; font-size:$font-paragraph-size; font-family:$font-paragraph; 
@@ -115,8 +122,10 @@ input[type="submit"],input[type="button"] {
 }
 .btn:hover,
 input[type="submit"]:hover,input[type="button"]:hover {
-	opacity:0.8;
+	opacity:0.8; text-decoration:none;
 }
+
+.gform_wrapper .gform_footer { text-align:center; }
 
 
 
@@ -138,6 +147,7 @@ input[type="submit"]:hover,input[type="button"]:hover {
 #footer {
 	padding:($standard-pad*2) 0;
 	.inner-wrap { text-align:center; }
+	a { color:$color-tan; }
 }
 
 
@@ -281,12 +291,14 @@ a.read_more { text-decoration:underline; font-style:italic; display:block; }
 
 body.home-page {
 	#page { padding-top:($standard-pad*4); }
+	#page.no-menu { padding-top:0; }
 	#home-header {
 		color:#fff; padding:($standard-pad*8) 0; text-shadow:0 1px 2px rgba( 0,0,0,0.4 );
-		background:no-repeat center center;
+		background:no-repeat center top;
 		-webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;
 		.inner-wrap { text-align:center; }
 		h1, .h5 { color:#fff; }
+		.h5 { max-width:$max-width-b; margin:0 auto; }
 		.icon-support { display:inline-block; font-size:60px; padding-bottom:$standard-pad; }
 		.cover { width:100%; height:100%; position:absolute; top:0; left:0; background:rgba( 0,0,0,0.2 ); }
 	}
@@ -294,6 +306,7 @@ body.home-page {
 		padding:($standard-pad*4) 0; 
 		h2 { text-align:center; }
 		.inner-wrap { max-width:$max-width-b; }
+		.call-to-action { display:block; text-align:center; padding-bottom:$standard-pad; }
 	}
 	.section:nth-child(2n+2) { 
 		background:#fff; 
@@ -302,6 +315,11 @@ body.home-page {
 			.line { background:$color-gray-light; }
 			.icon-support { background:#fff; }
 		}
+		.home-section-image { border-color:$color-gray-light; }
+	}
+	.circle-left {
+		.home-section-image { float:left; }
+		.post-wrap { padding-left:180px; }
 	}
 }
 
