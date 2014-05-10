@@ -91,7 +91,6 @@ get_template_part( 'header-head' );
 			<footer class="inner-wrap">
 				<p>&copy;<?php echo date('Y'); ?> <?php bloginfo('name'); ?></p>
 				<?php 
-
 				wp_nav_menu( array( 
 					'depth' => 1, 
 					'fallback_cb' => '', 
@@ -99,7 +98,6 @@ get_template_part( 'header-head' );
 					'container' => 'div', 
 					'container_id' => 'footer-navigation' 
 				) );
-
 				?>
 				<div class="clear"></div>
 			</footer>

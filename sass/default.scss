@@ -137,11 +137,16 @@ input[type="submit"]:hover,input[type="button"]:hover {
 
 #header { 
 	position:fixed; z-index:10; top:0; left:0; width:100%; height:($standard-pad*4); background:#fff; 
-	.inner-wrap { text-align:center; }
+	.inner-wrap { max-width:10000px; text-align:center; }
 	#primary-navigation {
 		li { display:inline-block; }
 		a { display:inline-block; padding:0 ($standard-pad); line-height:($standard-pad*4); @include transition(all 0.1s ease-in) }
 		a:hover { background:$color-gray-light; }
+		li.ic {
+			position:relative; 
+			a { padding-left:($standard-pad*3); }
+		}
+		li.ic:before { opacity:0.5; position:absolute; left:15px; top:23px; }
 	}
 }
 #footer {
@@ -240,7 +245,7 @@ a.read_more { text-decoration:underline; font-style:italic; display:block; }
 	ul { list-style:disc; }
 	ol { list-style:decimal; }
 	li { padding-bottom:7px; }
-	strong {}
+	strong { font-weight:800; color:$color-purple-dark; }
 	small { font-size:11px; }
 	table { line-height:18px; }
 	table {
