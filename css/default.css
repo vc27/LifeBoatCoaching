@@ -1060,5 +1060,9 @@ License: GPL v2 - http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 @media (max-width: 767px) { /* line 35, ../sass/responsive.scss */
   body { padding-left: 0; padding-right: 0; } }
 /*end @media (max-width: 767px)*/
+@media (max-width: 568px) { /* line 48, ../sass/responsive.scss */
+  body.home-page .circle-left .home-section-image { float: none; display: block; margin: 0 auto; margin-bottom: 15px; }
+  /* line 49, ../sass/responsive.scss */
+  body.home-page .circle-left .post-wrap { padding-left: 0; } }
 /*end @media (max-width: 568px)*/
 /*end @media (max-width: 320px)*/
